@@ -3,7 +3,10 @@ from appconf import AppConf
 
 import tempfile
 import os
-settings.configure()
+
+if not settings.configured:
+    settings.configure()
+
 
 class ImagefitConf(AppConf):
 
